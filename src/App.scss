@@ -1,0 +1,64 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+h1 {
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+.balance {
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.transaction-list {
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  margin-bottom: 20px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 10px 0;
+      border-bottom: 1px solid #dee2e6;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .income {
+      color: green;
+    }
+
+    .expense {
+      color: red;
+    }
+  }
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
