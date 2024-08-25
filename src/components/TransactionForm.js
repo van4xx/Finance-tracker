@@ -1,3 +1,4 @@
+// src/components/TransactionForm.js
 import React, { useState } from 'react';
 
 const TransactionForm = ({ addTransaction }) => {
@@ -6,6 +7,12 @@ const TransactionForm = ({ addTransaction }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    
+    if (!amount) {
+      alert("Please enter an amount");
+      return;
+    }
+
     addTransaction({
       description,
       amount: parseFloat(amount),
