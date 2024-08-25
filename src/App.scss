@@ -62,3 +62,13 @@ form {
     width: 100%;
   }
 }
+
+.transaction-list ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    margin-left: 20px;
+  }
+}
