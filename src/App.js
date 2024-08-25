@@ -6,9 +6,14 @@ import TransactionForm from './components/TransactionForm';
 
 function App() {
   const [transactions, setTransactions] = useState([]);
-  
+
   const addTransaction = (transaction) => {
     setTransactions([...transactions, transaction]);
+  };
+
+  const deleteTransaction = (index) => {
+    const newTransactions = transactions.filter((_, i) => i !== index);
+    setTransactions(newTransactions);
   };
 
   const calculateBalance = () => {
@@ -19,7 +24,7 @@ function App() {
     <div className="App container">
       <h1>Finance Tracker</h1>
       <Balance balance={calculateBalance()} />
-      <TransactionList transactions={transactions} />
+      <TransactionList transactions={transactions} deleteTransaction={deleteTransaction} />
       <TransactionForm addTransaction={addTransaction} />
     </div>
   );
